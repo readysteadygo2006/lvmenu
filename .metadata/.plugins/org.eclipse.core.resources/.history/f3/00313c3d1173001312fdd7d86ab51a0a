@@ -1,0 +1,51 @@
+package com.mkyong.android;
+
+import com.mkyong.android.adaptor.MobileArrayAdapter;
+
+import android.app.ListActivity;
+import android.content.Context;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.view.LayoutInflater;
+import android.view.View;
+
+public class ListMobileActivity extends ListActivity {
+
+	static final String[] MOBILE_OS = new String[] { "Android", "iOS",
+			"WindowsMobile", "Blackberry"};
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		//setListAdapter(new ArrayAdapter<String>(this, R.layout.list_mobile,
+		//		R.id.label, MOBILE_OS));
+		
+		setListAdapter(new MobileArrayAdapter(this, MOBILE_OS));
+		
+
+	}
+
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+
+		//get selected items
+		LayoutInflater inflater = (LayoutInflater) this
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		View rowView = inflater.inflate(R.layout.list_mobile_sel, l, false);
+		ImageView imageView = (ImageView) rowView.findViewById(R.id.logo);
+
+		// Change icon based on name
+
+
+		imageView.setImageResource(R.drawable.windowsmobile_logo);
+		
+		v = rowView;
+
+	}
+
+}

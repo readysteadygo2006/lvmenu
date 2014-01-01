@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;itemImage&apos; in &apos;com.digitalaria.gama.sample.carousel.R.id&apos; to &apos;image&apos;&#x0A;- Original project: &apos;SampleCarousel&apos;&#x0A;- Original element: &apos;com.digitalaria.gama.sample.carousel.R.id.itemImage&apos;&#x0A;- Renamed element: &apos;com.digitalaria.gama.sample.carousel.R.id.image&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="true" description="Rename field &apos;itemImage&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/gen&lt;com.digitalaria.gama.sample.carousel{R.java[R[id^itemImage" name="image" references="true" setter="false" stamp="1387748999504" textual="false" version="1.0"/>
+</session>
